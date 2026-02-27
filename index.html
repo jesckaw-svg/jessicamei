@@ -6,7 +6,8 @@
   <title>Jessica Mei — Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -23,7 +24,7 @@
     .cursor-ring.hovering { transform: translate(-50%,-50%) scale(1.5); opacity: 0; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; color: var(--dark-brown); text-decoration: none; }
+    .nav-logo { font-family: 'Satoshi', sans-serif; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; color: var(--dark-brown); text-decoration: none; }
     .nav-links { display: flex; gap: 36px; }
     .nav-links a { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); text-decoration: none; transition: color 0.3s; }
     .nav-links a:hover { color: var(--accent); }
@@ -31,7 +32,7 @@
     #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; background: var(--cream); position: relative; overflow: hidden; }
     .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: 120px 60px 80px; }
     .hero-tag { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
-    .hero-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem,7vw,7.5rem); font-weight: 300; line-height: 0.95; color: var(--ink); margin-bottom: 32px; opacity: 0; animation: fadeUp 0.9s 0.4s forwards; }
+    .hero-name { font-family: 'Satoshi', sans-serif; font-size: clamp(4rem,7vw,7.5rem); font-weight: 300; line-height: 0.95; color: var(--ink); margin-bottom: 32px; opacity: 0; animation: fadeUp 0.9s 0.4s forwards; }
     .hero-name em { font-style: italic; color: var(--accent); }
     .hero-desc { font-size: 1rem; line-height: 1.8; color: var(--brown); max-width: 380px; margin-bottom: 48px; opacity: 0; animation: fadeUp 0.9s 0.6s forwards; }
     .hero-cta { display: inline-flex; align-items: center; gap: 12px; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--tan); padding-bottom: 6px; width: fit-content; transition: gap 0.3s, border-color 0.3s; opacity: 0; animation: fadeUp 0.9s 0.8s forwards; }
@@ -40,20 +41,20 @@
     .hero-right::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9B89A' fill-opacity='0.25'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .hero-image-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; z-index: 1; }
     .hero-circle { width: 280px; height: 280px; border-radius: 50%; background: var(--tan); opacity: 0.5; }
-    .hero-photo-note { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--brown); opacity: 0.7; text-align: center; }
+    .hero-photo-note { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 1rem; color: var(--brown); opacity: 0.7; text-align: center; }
     .hero-scroll { position: absolute; bottom: 40px; left: 60px; display: flex; align-items: center; gap: 12px; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tan); opacity: 0; animation: fadeUp 1s 1.2s forwards; }
     .scroll-line { width: 40px; height: 1px; background: var(--tan); animation: scrollLine 2s 2s infinite; }
     @keyframes scrollLine { 0%,100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(0.3); opacity: 0.4; } }
 
     .marquee-wrap { background: var(--dark-brown); padding: 18px 0; overflow: hidden; white-space: nowrap; }
     .marquee-track { display: inline-flex; animation: marquee 20s linear infinite; }
-    .marquee-item { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--tan); padding: 0 40px; }
+    .marquee-item { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 1.1rem; color: var(--tan); padding: 0 40px; }
     .marquee-dot { color: var(--accent); }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
     section { padding: 120px 60px; }
     .section-label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
-    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem,4vw,4rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 60px; }
+    .section-title { font-family: 'Satoshi', sans-serif; font-size: clamp(2.5rem,4vw,4rem); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 60px; }
     .section-title em { font-style: italic; color: var(--accent); }
 
     #work { background: var(--warm-white); }
@@ -69,7 +70,7 @@
     .project-card.featured { grid-column: span 2; }
     .project-thumb { background: var(--sand); aspect-ratio: 16/9; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .project-card.featured .project-thumb { aspect-ratio: 21/9; }
-    .thumb-placeholder { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--brown); opacity: 0.5; }
+    .thumb-placeholder { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 1rem; color: var(--brown); opacity: 0.5; }
     .project-thumb-overlay { position: absolute; inset: 0; background: var(--dark-brown); opacity: 0; transition: opacity 0.4s; display: flex; align-items: center; justify-content: center; }
     .project-card:hover .project-thumb-overlay { opacity: 0.65; }
     .overlay-text { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cream); display: flex; align-items: center; gap: 10px; }
@@ -78,15 +79,15 @@
     .project-info { padding: 28px 32px 32px; }
     .project-tags { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
     .tag { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown); background: var(--sand); padding: 4px 10px; border-radius: 20px; }
-    .project-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--ink); margin-bottom: 8px; }
+    .project-title { font-family: 'Satoshi', sans-serif; font-size: 1.6rem; font-weight: 400; color: var(--ink); margin-bottom: 8px; }
     .project-desc { font-size: 0.88rem; line-height: 1.7; color: var(--brown); }
 
     #about { background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .about-image { background: var(--sand); aspect-ratio: 3/4; border-radius: 4px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .about-image-note { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--brown); opacity: 0.6; text-align: center; padding: 20px; z-index: 1; position: relative; }
+    .about-image-note { font-family: 'Satoshi', sans-serif; font-style: italic; color: var(--brown); opacity: 0.6; text-align: center; padding: 20px; z-index: 1; position: relative; }
     .about-blob { position: absolute; width: 200px; height: 200px; background: var(--tan); border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; opacity: 0.4; }
     .about-text p { font-size: 0.95rem; line-height: 1.9; color: var(--brown); margin-bottom: 20px; }
-    .about-text p:first-of-type { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; line-height: 1.5; color: var(--ink); }
+    .about-text p:first-of-type { font-family: 'Satoshi', sans-serif; font-size: 1.5rem; font-weight: 300; line-height: 1.5; color: var(--ink); }
     .skills-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
     .skill-pill { font-size: 0.75rem; letter-spacing: 0.1em; padding: 8px 16px; border: 1px solid var(--tan); border-radius: 20px; color: var(--brown); }
 
@@ -97,11 +98,11 @@
     .contact-links { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
     .contact-link { display: inline-flex; align-items: center; gap: 10px; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); text-decoration: none; border: 1px solid rgba(255,255,255,0.2); padding: 14px 28px; border-radius: 2px; transition: background 0.3s, border-color 0.3s; }
     .contact-link:hover { background: var(--accent); border-color: var(--accent); }
-    .contact-email { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 2rem; color: var(--accent-light); margin-bottom: 48px; display: block; text-decoration: none; }
+    .contact-email { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 2rem; color: var(--accent-light); margin-bottom: 48px; display: block; text-decoration: none; }
 
     footer { background: var(--ink); padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; }
     .footer-copy { font-size: 0.75rem; color: var(--brown); letter-spacing: 0.05em; }
-    .footer-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--tan); }
+    .footer-name { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 1rem; color: var(--tan); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }

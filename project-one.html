@@ -6,7 +6,8 @@
   <title>Project One — Jessica Mei</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -23,7 +24,7 @@
     .cursor-ring.hovering { transform: translate(-50%,-50%) scale(1.5); opacity: 0; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(12px); }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; color: var(--dark-brown); text-decoration: none; }
+    .nav-logo { font-family: 'Satoshi', sans-serif; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; color: var(--dark-brown); text-decoration: none; }
     .nav-back { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s, gap 0.3s; }
     .nav-back:hover { color: var(--accent); gap: 14px; }
 
@@ -31,7 +32,7 @@
     .cs-hero { min-height: 80vh; background: var(--cream); display: grid; grid-template-columns: 1fr 1fr; padding-top: 100px; }
     .cs-hero-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
     .cs-label { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; opacity: 0; animation: fadeUp 0.7s 0.1s forwards; }
-    .cs-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem,5vw,5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s 0.25s forwards; }
+    .cs-title { font-family: 'Satoshi', sans-serif; font-size: clamp(2.8rem,5vw,5rem); font-weight: 300; line-height: 1.05; color: var(--ink); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s 0.25s forwards; }
     .cs-title em { font-style: italic; color: var(--accent); }
     .cs-subtitle { font-size: 1rem; line-height: 1.8; color: var(--brown); max-width: 420px; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
     .cs-hero-meta { padding: 80px 60px; display: flex; flex-direction: column; justify-content: flex-end; gap: 40px; }
@@ -44,14 +45,14 @@
     /* Hero image band */
     .cs-hero-image { background: var(--sand); height: 480px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .cs-hero-image::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23C9B89A' fill-opacity='0.2'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .img-placeholder { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--brown); opacity: 0.5; position: relative; z-index: 1; text-align: center; }
+    .img-placeholder { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 1.1rem; color: var(--brown); opacity: 0.5; position: relative; z-index: 1; text-align: center; }
     .img-placeholder span { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; font-style: normal; margin-top: 8px; }
 
     /* Content */
     .cs-body { max-width: 780px; margin: 0 auto; padding: 100px 60px; }
     .cs-section { margin-bottom: 80px; }
     .cs-section-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
-    .cs-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--ink); margin-bottom: 24px; line-height: 1.2; }
+    .cs-section h2 { font-family: 'Satoshi', sans-serif; font-size: 2.2rem; font-weight: 300; color: var(--ink); margin-bottom: 24px; line-height: 1.2; }
     .cs-section h2 em { font-style: italic; color: var(--accent); }
     .cs-section p { font-size: 0.95rem; line-height: 1.9; color: var(--brown); margin-bottom: 16px; }
 
@@ -71,27 +72,27 @@
     /* Stat row */
     .cs-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--sand); border-radius: 4px; overflow: hidden; margin: 60px 0; }
     .cs-stat { background: var(--cream); padding: 40px 32px; text-align: center; }
-    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .stat-num { font-family: 'Satoshi', sans-serif; font-size: 3rem; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 8px; }
     .stat-desc { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--brown); line-height: 1.5; }
 
     /* Process steps */
     .cs-process { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
     .process-step { background: var(--cream); border-radius: 4px; padding: 32px; border-left: 3px solid var(--accent); }
-    .step-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--tan); font-weight: 300; margin-bottom: 12px; }
+    .step-num { font-family: 'Satoshi', sans-serif; font-size: 2rem; color: var(--tan); font-weight: 300; margin-bottom: 12px; }
     .step-title { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark-brown); margin-bottom: 10px; }
     .step-desc { font-size: 0.85rem; line-height: 1.7; color: var(--brown); }
 
     /* Next project */
     .cs-next { background: var(--cream); padding: 80px 60px; display: flex; justify-content: space-between; align-items: center; }
     .next-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--tan); margin-bottom: 12px; }
-    .next-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--ink); }
+    .next-title { font-family: 'Satoshi', sans-serif; font-size: 2rem; font-weight: 300; color: var(--ink); }
     .next-title em { font-style: italic; color: var(--accent); }
-    .next-arrow { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--tan); text-decoration: none; transition: color 0.3s, transform 0.3s; display: block; }
+    .next-arrow { font-family: 'Satoshi', sans-serif; font-size: 3rem; color: var(--tan); text-decoration: none; transition: color 0.3s, transform 0.3s; display: block; }
     .next-arrow:hover { color: var(--accent); transform: translateX(10px); }
 
     footer { background: var(--ink); padding: 28px 60px; display: flex; justify-content: space-between; align-items: center; }
     .footer-copy { font-size: 0.75rem; color: var(--brown); }
-    .footer-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; color: var(--tan); }
+    .footer-name { font-family: 'Satoshi', sans-serif; font-style: italic; font-size: 1rem; color: var(--tan); }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
